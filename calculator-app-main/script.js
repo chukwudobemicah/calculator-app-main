@@ -95,4 +95,3 @@ switchButtons.forEach(sb => {
 switchButtons.forEach(sb => {
   sb.classList.add('hidden');
 });
-// switchButton1.addEventListener('mo')
