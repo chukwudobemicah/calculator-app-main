@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=DM+Sans:wght@400;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@300;500;700&family=Josefin+Sans:wght@300;400;600&family=League+Spartan:wght@700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300&family=Space+Grotesk:wght@500&display=swap');
+/* RESETS*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+:root {
+  --Very-darkest-desaturated-blue: hsl(222, 26%, 31%);
+  --Very-dark-desaturated-blue: hsl(223, 31%, 20%);
+  --Very-dark-desaturated-blue: hsl(224, 36%, 15%);
+  --Desaturated-dark-blue: hsl(225, 21%, 49%);
+  --Desaturated-darker-blue: hsl(224, 28%, 35%);
+  --Red: hsl(6, 63%, 50%);
+  --Dark-red: hsl(6, 70%, 34%);
+  --Light-grayish-orange: hsl(30, 25%, 89%);
+  --Grayish-orange: hsl(28, 16%, 65%);
+  --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  /*  */
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 90%);
+  --Grayish-red: hsl(0, 5%, 81%);
+  --Very-light-gray: hsl(0, 0%, 93%);
+  --Dark-moderate-cyan: hsl(185, 42%, 37%);
+  --Very-dark-cyan: hsl(185, 58%, 25%);
+  --Orange: hsl(25, 98%, 40%);
+  --Dark-orange: hsl(25, 99%, 27%);
+  --Light-grayish-yellow: hsl(45, 7%, 89%);
+  --Dark-grayish-orange: hsl(35, 11%, 61%);
+  --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  /*  */
+  --White: hsl(0, 0%, 100%);
+  --Very-dark-violet: hsl(268, 75%, 9%);
+  --Very-dark-violet: hsl(268, 71%, 12%);
+  --Dark-violet: hsl(281, 89%, 26%);
+  --Vivid-magenta: hsl(285- 91%, 52%);
+  --Pure-cyan: hsl(176, 100%, 44%);
+  --Soft-cyan: hsl(177, 92%, 70%);
+  --Very-dark-violet: hsl(268, 47%, 21%);
+  --Dark-magenta: hsl(290, 70%, 36%);
+  --Light-yellow: hsl(52, 100%, 62%);
+  --Very-dark-blue: hsl(198, 20%, 13%);
+  --White: hsl(0, 0%, 100%);
+}
+/* styles */
+body {
+  width: 100vw;
+  font-size: 2rem;
+  height: 100vh;
+  font-family: 'Barlow', sans-serif;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'League Spartan', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  background-color: var(--Light-grayish-yellow);
+}
+header,
+section {
+  width: clamp(300px, 85%, 350px);
+  margin: 0 auto;
+}
+.display {
+  width: 100%;
+  height: 4.5rem;
+  color: #000;
+  background-color: var(--White);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1.6rem;
+  font-weight: 700;
+  overflow: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1rem;
+}
+header > p {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+button {
+  cursor: pointer;
+}
+.color-switch {
+  display: flex;
+  justify-content: space-between;
+}
+.calculator-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24rem;
+  background-color: var(--Grayish-red);
+  border-radius: 5px;
+}
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 85%;
+  height: 85%;
+}
+.bottom {
+  grid-column: span 4;
+  display: flex;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.calculator button {
+  font-weight: 600;
+  border: none;
+  box-shadow: inset 0px -6px 0px 0px var(--Grayish-orange);
+  /* box-shadow: inset 0px -6px 0px 0px rgba(0, 0, 0, 0.406); */
+  /* box-shadow: inset 10px 10px 5px 5px var(--Very-dark-grayish-yellow); */
+  border-radius: 5px;
+  background-color: var(--Light-grayish-yellow);
+  transition: box-shadow 0.15s ease;
+}
+.calculator .delete,
+.bottom .reset {
+  background-color: var(--Dark-moderate-cyan);
+  box-shadow: inset 0px -6px 0px 0px var(--Very-dark-cyan);
+  color: var(--White);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.calculator .solution {
+  background-color: var(--Orange);
+  color: var(--White);
+  box-shadow: inset 0px -6px 0px 0px var(--Dark-orange);
+}
+.color-switch-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 1rem;
+  border-radius: 5px;
+  background-color: var(--Grayish-red);
+}
+.color-switch-button button {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: none;
+  background-color: var(--Orange);
+  border-radius: 50%;
+}
+
+/* dark mode */
+.dark body {
+  background-color: var(--Very-dark-violet);
+}
+.dark .display {
+  background-color: var(--Dark-violet);
+  color: var(--Light-yellow);
+}
+.dark .calculator button {
+  background-color: var(--Dark-violet);
+  color: var(--Light-yellow);
+}
+.dark .calculator .solution {
+  background-color: var(--Soft-cyan);
+  box-shadow: inset 0px -6px 0px 0px var(--Pure-cyan);
+  color: #000;
+}
+.dark .bottom .reset,
+.dark .calculator .delete {
+  background-color: #7a0a7a;
+  box-shadow: inset 0px -6px 0px 0px rgba(202, 31, 202, 0.739);
+}
+.dark header {
+  color: var(--Light-yellow);
+}
+.dark .calculator button {
+  box-shadow: inset 0px -6px 0px 0px rgba(255, 255, 255, 0.534);
+}
+
+/* blue-theme */
+
+.blue-theme body {
+  background-color: var(--Very-dark-grayish-blue);
+}
+.blue-theme .display {
+  background-color: var(--Very-dark-desaturated-blue);
+  color: var(--White);
+}
+.blue-theme .calculator button {
+  background-color: var(--Very-light-gray);
+  color: #000;
+}
+.blue-theme .calculator .solution {
+  background-color: var(--Orange);
+  color: var(--White);
+  box-shadow: inset 0px -6px 0px 0px var(--Dark-orange);
+}
+.blue-theme .calculator .delete,
+.blue-theme .bottom .reset {
+  background-color: var(--Desaturated-dark-blue);
+  color: var(--White);
+  box-shadow: inset 0px -6px 0px 0px var(--Very-darkest-desaturated-blue);
+}
+.blue-theme header {
+  color: var(--White);
+}
+.blue-theme .calculator button {
+  box-shadow: inset 0px -6px 0px 0px var(--Grayish-orange);
+}
+
+.hidden {
+  opacity: 0;
+}
+.visible {
+  opacity: 1;
+}
+.calculator button:focus,
+.calculator button:hover {
+  box-shadow: inset 10px 10px 5px 5px rgba(0, 0, 0, 0.406);
+}
+.dark .calculator button:focus,
+.dark .calculator button:hover {
+  box-shadow: inset 10px 10px 5px 5px rgba(0, 0, 0, 0.406);
+}
+.blue-theme .calculator button:focus,
+.blue-theme .calculator button:hover {
+  box-shadow: inset 10px 10px 5px 5px rgba(0, 0, 0, 0.406);
+}
