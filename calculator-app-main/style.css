@@ -126,7 +126,7 @@ body {
 }
 header,
 section {
-  width: clamp(300px, 85%, 350px);
+  width: clamp(18.75rem, 85%, 21.875rem);
   margin: 0 auto;
 }
 .display {
@@ -248,13 +248,13 @@ button {
 .dark .bottom .reset,
 .dark .calculator .delete {
   background-color: #7a0a7a;
-  box-shadow: inset 0px -6px 0px 0px rgba(202, 31, 202, 0.739);
+  box-shadow: inset 0px -6px 0px 0px rgba(202, 31, 202, 0.824);
 }
 .dark header {
   color: var(--Light-yellow);
 }
 .dark .calculator button {
-  box-shadow: inset 0px -6px 0px 0px rgba(255, 255, 255, 0.534);
+  box-shadow: inset 0px -6px 0px 0px rgb(225, 45, 171);
 }
 
 /* blue-theme */
