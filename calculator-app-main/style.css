@@ -105,10 +105,8 @@ ol {
 }
 /* styles */
 body {
-  /* min-width: 100vw; */
-  width: 100vw !important;
   font-size: 2rem;
-  height: 100vh !important;
+  height: 100vh;
   font-family: 'Barlow', sans-serif;
   font-family: 'DM Sans', sans-serif;
   font-family: 'Fraunces', serif;
@@ -122,14 +120,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-height: 100vh !important;
+  max-height: 100vh;
   background-color: var(--Light-grayish-yellow);
 }
 header,
 section {
   width: 85%;
   max-width: 85%;
-  /* width: clamp(18.75rem, 22rem, 21.875rem); */
+  /* width: clamp(18.75rem, 22rem, 21.875rem); */ /*i would have used clamp to avoid media query but safari does'nt support clamp perfectly*/
 }
 .display {
   width: 100%;
@@ -165,6 +163,9 @@ button {
   display: flex;
   justify-content: space-between;
 }
+input[type='radio'] {
+  cursor: pointer;
+}
 .calculator-container {
   display: flex;
   align-items: center;
@@ -175,13 +176,12 @@ button {
 }
 .calculator {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) !important;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  width: 85% !important;
-  max-width: 85% !important;
+  width: 85%;
+  max-width: 85%;
   height: 85%;
-  color: black !important;
-  /* background-color: blue; */
+  color: black;
 }
 .bottom {
   grid-column: span 4;
@@ -198,8 +198,8 @@ button {
   border-radius: 5px;
   background-color: var(--Light-grayish-yellow);
   transition: box-shadow 0.15s ease;
-  max-width: 100% !important;
-  width: 100% !important;
+  max-width: 100%;
+  width: 100%;
 }
 .calculator .delete,
 .bottom .reset {
@@ -307,6 +307,10 @@ button {
 }
 .blue-theme .calculator button:active {
   box-shadow: inset 10px 10px 5px 5px rgba(0, 0, 0, 0.406);
+}
+input[type='radio']:focus-within {
+  background-color: orange;
+  color: orange;
 }
 
 @media screen and (min-width: 700px) {

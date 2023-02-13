@@ -73,25 +73,25 @@ switchButton1.addEventListener('click', function () {
   theme3();
 });
 
-const why = function () {
-  switchButtons.forEach(sb => {
-    sb.classList.remove('visible');
-    sb.classList.add('hidden');
-  });
-};
-const yes = function (el) {
-  el.classList.remove('hidden');
-  el.classList.add('visible');
-};
-switchButtons.forEach(sb => {
-  sb.addEventListener('click', function (e) {
-    const clicked = e.target;
-    yes(clicked);
-    why();
-    clicked.classList.add('visible');
-  });
-});
+// const why = function () {
+//   switchButtons.forEach(sb => {
+//     sb.classList.remove('visible');
+//     sb.classList.add('hidden');
+//   });
+// };
+// const yes = function (el) {
+//   el.classList.remove('hidden');
+//   el.classList.add('visible');
+// };
+// switchButtons.forEach(sb => {
+//   sb.addEventListener('click', function (e) {
+//     const clicked = e.target;
+//     yes(clicked);
+//     why();
+//     clicked.classList.add('visible');
+//   });
+// });
 
-switchButtons.forEach(sb => {
-  sb.classList.add('hidden');
-});
+// switchButtons.forEach(sb => {
+//   sb.classList.add('hidden');
+// });
