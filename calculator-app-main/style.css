@@ -105,6 +105,7 @@ ol {
 }
 /* styles */
 body {
+  /* min-width: 100vw; */
   width: 100vw;
   font-size: 2rem;
   height: 100vh;
@@ -126,8 +127,9 @@ body {
 }
 header,
 section {
-  width: clamp(18.75rem, 85%, 21.875rem);
-  margin: 0 auto;
+  width: 25rem;
+  max-width: 25rem;
+  /* width: clamp(18.75rem, 22rem, 21.875rem); */
 }
 .display {
   width: 100%;
@@ -173,15 +175,16 @@ button {
 }
 .calculator {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr) !important;
   gap: 1rem;
-  width: 85%;
+  width: 85% !important;
+  max-width: 85% !important;
   height: 85%;
+  color: black !important;
+  /* background-color: blue; */
 }
 .bottom {
   grid-column: span 4;
-  display: flex;
-  justify-content: space-between;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -195,6 +198,8 @@ button {
   border-radius: 5px;
   background-color: var(--Light-grayish-yellow);
   transition: box-shadow 0.15s ease;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 .calculator .delete,
 .bottom .reset {
@@ -294,15 +299,19 @@ button {
 .visible {
   opacity: 1;
 }
-.calculator button:focus,
-.calculator button:hover {
+.calculator button:active {
   box-shadow: inset 10px 10px 5px 5px rgba(0, 0, 0, 0.406);
 }
-.dark .calculator button:focus,
-.dark .calculator button:hover {
+.dark .calculator button:active {
   box-shadow: inset 10px 10px 5px 5px rgba(0, 0, 0, 0.406);
 }
-.blue-theme .calculator button:focus,
-.blue-theme .calculator button:hover {
+.blue-theme .calculator button:active {
   box-shadow: inset 10px 10px 5px 5px rgba(0, 0, 0, 0.406);
+}
+
+@media screen and (min-width: 700px) {
+  header,
+  section {
+    width: 21.875rem;
+  }
 }
