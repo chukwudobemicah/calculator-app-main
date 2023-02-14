@@ -123,11 +123,17 @@ body {
   max-height: 100vh;
   background-color: var(--Light-grayish-yellow);
 }
+button {
+  padding: 0;
+}
+a[href^='tel:'] {
+  color: #000 !important;
+}
 header,
 section {
   width: 85%;
   max-width: 85%;
-  /* width: clamp(18.75rem, 22rem, 21.875rem); */ /*i would have used clamp to avoid media query but safari does'nt support clamp perfectly*/
+  width: clamp(18.75rem, 22rem, 21.875rem);
 }
 .display {
   width: 100%;
@@ -193,11 +199,9 @@ input[type='radio'] {
   font-weight: 600;
   border: none;
   box-shadow: inset 0px -6px 0px 0px var(--Grayish-orange);
-  /* box-shadow: inset 0px -6px 0px 0px rgba(0, 0, 0, 0.406); */
-  /* box-shadow: inset 10px 10px 5px 5px var(--Very-dark-grayish-yellow); */
   border-radius: 5px;
   background-color: var(--Light-grayish-yellow);
-  transition: box-shadow 0.15s ease;
+  transition: box-shadow 0.1s ease;
   max-width: 100%;
   width: 100%;
 }
@@ -311,11 +315,4 @@ input[type='radio'] {
 input[type='radio']:focus-within {
   background-color: orange;
   color: orange;
-}
-
-@media screen and (min-width: 700px) {
-  header,
-  section {
-    width: 21.875rem;
-  }
 }
