@@ -145,6 +145,7 @@ section {
   margin-bottom: 1.6rem;
   font-weight: 700;
   overflow: hidden;
+  text-align: right;
 }
 header {
   display: flex;
@@ -297,6 +298,7 @@ input[type='radio'] {
   box-shadow: inset 0px -6px 0px 0px var(--Grayish-orange);
 }
 
+/* THEMES BUTTON */
 .hidden {
   opacity: 0;
 }
@@ -311,8 +313,4 @@ input[type='radio'] {
 }
 .blue-theme .calculator button:active {
   box-shadow: inset 10px 10px 5px 5px rgba(0, 0, 0, 0.406);
-}
-input[type='radio']:focus-within {
-  background-color: orange;
-  color: orange;
 }

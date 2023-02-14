@@ -9,6 +9,7 @@ const switchButtons = document.querySelectorAll(
 const switchButton1 = document.querySelector('.color-switch-button-1');
 const switchButton2 = document.querySelector('.color-switch-button-2');
 const switchButton3 = document.querySelector('.color-switch-button-3');
+console.log(switchButton1);
 const button = document.querySelectorAll('.calculator button');
 
 const calculate = function () {
@@ -73,25 +74,25 @@ switchButton1.addEventListener('click', function () {
   theme3();
 });
 
-// const why = function () {
-//   switchButtons.forEach(sb => {
-//     sb.classList.remove('visible');
-//     sb.classList.add('hidden');
-//   });
-// };
-// const yes = function (el) {
-//   el.classList.remove('hidden');
-//   el.classList.add('visible');
-// };
-// switchButtons.forEach(sb => {
-//   sb.addEventListener('click', function (e) {
-//     const clicked = e.target;
-//     yes(clicked);
-//     why();
-//     clicked.classList.add('visible');
-//   });
-// });
+const toggleVisibleBtn = function () {
+  switchButtons.forEach(sb => {
+    sb.classList.remove('visible');
+    sb.classList.add('hidden');
+  });
+};
+const addVisibleBtn = function (el) {
+  el.classList.remove('hidden');
+  el.classList.add('visible');
+};
+switchButtons.forEach(sb => {
+  sb.addEventListener('click', function (e) {
+    const clicked = e.target;
+    addVisibleBtn(clicked);
+    toggleVisibleBtn();
+    clicked.classList.add('visible');
+  });
+});
 
-// switchButtons.forEach(sb => {
-//   sb.classList.add('hidden');
-// });
+switchButtons.forEach(sb => {
+  sb.classList.add('hidden');
+});
