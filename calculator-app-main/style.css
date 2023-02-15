@@ -91,13 +91,13 @@ ol {
   --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
   /*  */
   --White: hsl(0, 0%, 100%);
-  --Very-dark-violet: hsl(268, 75%, 9%);
-  --Very-dark-violet: hsl(268, 71%, 12%);
+  --Very-dark-violet2: hsl(268, 75%, 9%);
+  --Very-dark-violet: hsl(268, 73%, 16%);
   --Dark-violet: hsl(281, 89%, 26%);
   --Vivid-magenta: hsl(285- 91%, 52%);
   --Pure-cyan: hsl(176, 100%, 44%);
   --Soft-cyan: hsl(177, 92%, 70%);
-  --Very-dark-violet: hsl(268, 47%, 21%);
+  --Very-dark-violet3: hsl(268, 47%, 21%);
   --Dark-magenta: hsl(290, 70%, 36%);
   --Light-yellow: hsl(52, 100%, 62%);
   --Very-dark-blue: hsl(198, 20%, 13%);
@@ -159,7 +159,7 @@ header > div {
   gap: 2rem;
   font-size: 1rem;
 }
-header > p {
+header > h1 {
   font-size: 1.7rem;
   font-weight: 700;
 }
@@ -243,11 +243,14 @@ input[type='radio'] {
   background-color: var(--Very-dark-violet);
 }
 .dark .display {
-  background-color: var(--Dark-violet);
+  background-color: var(--Very-dark-violet2);
   color: var(--Light-yellow);
 }
+.dark .calculator-container {
+  background-color: var(--Very-dark-violet2);
+}
 .dark .calculator button {
-  background-color: var(--Dark-violet);
+  background-color: var(--Very-dark-violet);
   color: var(--Light-yellow);
 }
 .dark .calculator .solution {
@@ -275,6 +278,9 @@ input[type='radio'] {
 .blue-theme .display {
   background-color: var(--Very-dark-desaturated-blue);
   color: var(--White);
+}
+.blue-theme .calculator-container {
+  background-color: var(--Very-dark-desaturated-blue);
 }
 .blue-theme .calculator button {
   background-color: var(--Very-light-gray);

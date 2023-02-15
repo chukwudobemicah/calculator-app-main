@@ -18,7 +18,7 @@ const calculate = function () {
       textArea.textContent += n.value;
     });
   });
-  document.querySelectorAll('#operator').forEach(op => {
+  document.querySelectorAll('.operator').forEach(op => {
     op.addEventListener('click', function (e) {
       textArea.textContent += op.value;
     });
